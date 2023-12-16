@@ -1,0 +1,194 @@
+@import "water/builds/water";
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, "PingFang SC",
+    "Hiragino Sans GB", STHeiti, "Microsoft YaHei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+
+  table {
+    display: block;
+    white-space: nowrap;
+    border-spacing: 0;
+    border-collapse: collapse;
+    overflow-x: auto;
+    max-width: 100%;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  code,
+  kbd,
+  var,
+  samp {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-style: normal;
+  }
+
+  > header > nav ul {
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin-right: 1em;
+      margin-bottom: 0.25em;
+    }
+  }
+
+  footer {
+    border-top: medium none currentcolor;
+    text-align: center;
+    font-size: 0.8em;
+  }
+
+  audio,
+  video {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  figure {
+    margin: 1em 0 0.5em;
+    padding: 0;
+
+    + p {
+      margin-top: 0.5em;
+    }
+
+    figcaption {
+      opacity: 0.65;
+      font-size: 0.85em;
+      text-align: center;
+    }
+  }
+
+  hr {
+    height: 1px;
+    margin: 2em 0;
+    border: 0;
+    background: var(--border);
+  }
+
+  details {
+    display: block;
+    overflow: visible;
+    background-color: var(--background);
+    padding: 0 1em;
+
+    nav {
+      margin: 0.5em 0;
+
+      ul {
+        margin: 0;
+        padding-left: 1em;
+
+        li {
+          display: list-item;
+          margin-right: 1em;
+          margin-bottom: 0.25em;
+        }
+      }
+    }
+
+    summary {
+      margin: 0;
+    }
+
+    &[open] {
+      padding: 0 1em 1em;
+    }
+  }
+}
+
+// article list styles
+article.home-section {
+  + article.home-section {
+    margin-top: 2em;
+  }
+}
+
+ul.pages-list {
+  list-style: none;
+  margin: 1em 0;
+  padding: 0;
+
+  li {
+    margin: 0.5em 0;
+    display: flex;
+    flex-direction: column-reverse;
+
+    @media (min-width: "800px") {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    small {
+      font-size: 0.75em;
+    }
+  }
+}
+
+// header styles
+.header-verification {
+  font-size: 1.5em;
+  color: var(--text-bright);
+  font-weight: 600;
+  margin-bottom: 0;
+  margin-top: 24px;
+  display: block;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%231d9bf0' viewBox='0 0 16 16'%3E%3Cpath d='M10.067.87a2.89 2.89 0 0 0-4.134 0l-.622.638-.89-.011a2.89 2.89 0 0 0-2.924 2.924l.01.89-.636.622a2.89 2.89 0 0 0 0 4.134l.637.622-.011.89a2.89 2.89 0 0 0 2.924 2.924l.89-.01.622.636a2.89 2.89 0 0 0 4.134 0l.622-.637.89.011a2.89 2.89 0 0 0 2.924-2.924l-.01-.89.636-.622a2.89 2.89 0 0 0 0-4.134l-.637-.622.011-.89a2.89 2.89 0 0 0-2.924-2.924l-.89.01-.622-.636zm.287 5.984-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708z'/%3E%3C/svg%3E")
+      no-repeat;
+    width: 1em;
+    height: 1em;
+    margin-left: 5px;
+    vertical-align: -15%;
+  }
+}
+
+.header-official {
+  margin-top: 0;
+  color: var(--text-muted);
+
+  svg {
+    vertical-align: -10%;
+    margin-right: 0.5em;
+  }
+}
+
+// dark mode styles
+#mode-switch {
+  vertical-align: -10%;
+  padding: 0;
+  font: inherit;
+  background: 0 0;
+  border: 0;
+}
+
+html.dark-mode #moon {
+  display: none;
+}
+
+html:not(.dark-mode) #sun {
+  display: none;
+}
+
+// other cleanup for water.css
+a[href^="mailto\:"]::before {
+  content: "";
+}
+
+a[href^="tel\:"]::before {
+  content: "";
+}
+
+a[href^="sms\:"]::before {
+  content: "";
+}
+
+// fix zoom.js overlay in dark mode
+.zoom-overlay {
+  background: var(--background-body);
+}
