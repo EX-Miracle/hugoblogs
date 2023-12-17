@@ -1,4 +1,4 @@
-baseURL = "example.com"
+baseURL = "https://hugoblogs.vercel.app"
 defaultContentLanguage = "zh-cn"
 defaultContentLanguageInSubdir = false
 title = "Someone's Blog"
