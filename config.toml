@@ -1,6 +1,6 @@
 baseURL = "https://voiceofgenshin.prvcy.page"
 defaultContentLanguage = "zh-cn"
-defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
 title = "GenshinYoimiya's Blog"
 theme = "futu"
 enableRobotsTXT = true
