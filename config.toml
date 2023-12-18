@@ -1,7 +1,7 @@
-baseURL = "https://hugoblogs.vercel.app"
+baseURL = "https://voiceofgenshin.prvcy.page"
 defaultContentLanguage = "zh-cn"
-defaultContentLanguageInSubdir = false
-title = "Someone's Blog"
+defaultContentLanguageInSubdir = ture
+title = "GenshinYoimiya's Blog"
 theme = "futu"
 enableRobotsTXT = true
 enableEmoji = true
